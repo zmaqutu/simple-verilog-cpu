@@ -13,7 +13,9 @@ module tb_simple_CPU;
     simple_cpu  #(DATA_WIDTH,ADDR_BITS,INSTR_WIDTH) SCPU_DUT(clk, rst, instruction);
     
     initial begin
-        clk = 1'b1;
+        $dumpfile("dump.vcd");
+	$dumpvars;
+	clk = 1'b1;
         rst = 1'b1;
         instruction = 20'd0;
         repeat(3) #1 clk=!clk;
