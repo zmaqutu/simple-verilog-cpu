@@ -15,10 +15,10 @@ module tb_reg_mem;
     reg_mem #(DATA_WIDTH,ADDR_BITS) RM (addr, data_in, wen, clk, data_out);
 
     initial begin
-        /* For use in EDAPlayground
+        //For use in EDAPlayground
         $dumpfile("dump.vcd");
         $dumpvars(1, tb_reg_mem);
-        */
+        
         
         clk = 0;
         wen = 1;
